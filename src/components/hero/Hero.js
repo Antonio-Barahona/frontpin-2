@@ -21,7 +21,7 @@ const Hero = () => {
           <img src={imageSlide2} className='d-block w-100' alt='Second slide' />
           <Carousel.Caption>
             <h3>un BackEnd Poderoso <br></br> PHP y Laravel</h3>
-            <p>El desarrollo del Backend la desarrollamso en PHP <br></br> toda la potencia y confiabilidad de un producto altamente probado .</p>
+            <p>El desarrollo del Backend lo hicimos en PHP <br></br> toda la potencia y confiabilidad de un producto altamente probado .</p>
             <Button variant='primary'>Read More</Button>
           </Carousel.Caption>
         </Carousel.Item>
