@@ -1,0 +1,13 @@
+@import "overrides";
+
+@import "mixin";
+
+@import "default";
+
+@import "../components/header/Header.scss";
+@import "../components/hero/Hero.scss";
+@import "../components/about/About.scss";
+@import "../components/products/Products.scss";
+@import "../components/servicios/Services.scss";
+@import "../containers/Contact/contac.scss";
+@import "../components/footer/footer.scss"

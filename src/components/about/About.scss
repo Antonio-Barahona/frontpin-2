@@ -1,0 +1,43 @@
+#aboutPri {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-top: 15%;
+  border-left: solid 32px #E0752F;
+  margin-bottom: 15%;
+  }
+  
+  .about-container{
+      display: flex;
+      flex-direction: column;
+     
+  }
+  
+  
+  .container__h2 {
+        align-self: center;
+        width: 768px;
+  }
+  
+  .container__h2 > h2{
+    font-size: 39px;
+    width: 400px;
+    align-content: flex-start;
+    
+  }
+  
+  .container__h2 > h2 > span{
+    color: #E0752F;
+  }
+  
+  
+  .container__P {
+        align-self: center;
+        width: 768px;
+        height: 197px;
+  }
+  
+  .container__P > p {
+    font-size: 16px;
+    
+  }
