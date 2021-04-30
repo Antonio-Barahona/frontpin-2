@@ -15,13 +15,13 @@ const Contact = () => {
 
     if (form.checkValidity()) {
       console.log(formData)
-      console.log('El form fue validado')
+      console.log('Formulario Validado')
       let responseData = await sendEmail(formData)
       console.log(responseData.data)
-      alert('El mensaje ha sido enviado');
+      alert('hemos recibido su mensaje, gracias por comunicarse');
       form.reset()
     } else {
-      alert('Debes completar correctamente el formulario');
+      alert('verifique los datos ingresdos');
     }
   }
 

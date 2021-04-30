@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-  baseURL: 'http://localhost:8000/api/'
+  baseURL: 'https://api-santiago.herokuapp.com/api/'
 })
 
 
@@ -9,7 +9,7 @@ const instance = axios.create({
 const sendEmail = async (data) => {
   const response = await instance({
     method: 'post',
-    url: 'contact/store',
+    url: 'contact/insertar',
     data: data
   });
 
