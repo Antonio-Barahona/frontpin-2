@@ -2,23 +2,26 @@ import React, { useState } from 'react';
 import ContactImage from '../../asset/images/contact-image.png';
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { sendEmail } from "../../axios"
+
+
+
 const Contact = () => {
-  const [validated, setValidated] = useState(false)
+  const [validated, ] = useState(false)
   const [formData, setFormData] = useState({})
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // alert('Se envio')
+    
     const form = e.currentTarget;
     console.log(form.checkValidity())
-    // checkValidity() es un metodo que me devuelve true o falsen
+    
 
     if (form.checkValidity()) {
       console.log(formData)
       console.log('Formulario Validado')
       let responseData = await sendEmail(formData)
       console.log(responseData.data)
-      alert('hemos recibido su mensaje, gracias por comunicarse');
+      alert('muchas gracias por su mensaje, nos contactaremos a la brevedad');
       form.reset()
     } else {
       alert('verifique los datos ingresdos');
@@ -28,13 +31,7 @@ const Contact = () => {
   const handleOnChange = (e) => {
     console.log(e.target.name)
     console.log(e.target.value)
-    // Vamos a crear nuestro objeto formData
-    // {
-    //   name: 'Franco'
-    //   email: "franco@gmail.com"
-    //   phone: 346787666656
-    //   message: 'sadasdasdasd asd asd '
-    // }
+    
     setFormData((prevState) => {
       return {
         ...prevState,
