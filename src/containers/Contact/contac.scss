@@ -20,7 +20,12 @@
       height: 48px;
       border-radius: 50px;
       margin-top: 5%;
+      box-shadow: 0px 8px 9px -5px rgba(0, 0, 0, 0.75);
     }
+    button:hover {
+      transform: scale(1.07);
+    }
+    
     .row {
       align-items: center;
     }
@@ -54,4 +59,10 @@
         box-shadow: none !important;
       }
     }
+  }
+
+  .groupForm {
+    position: relative;
+    z-index: 90;
+
   }

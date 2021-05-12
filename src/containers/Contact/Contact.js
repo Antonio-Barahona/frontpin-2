@@ -5,26 +5,34 @@ import { sendEmail } from "../../axios"
 
 
 
+
+
+//----------------- intentando mensajes de error ------------------ //
+
+
+
 const Contact = () => {
   const [validated, ] = useState(false)
-  const [formData, setFormData] = useState({})
+  const [formData, setFormData] = useState ( {} )
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    const form = e.currentTarget;
-    console.log(form.checkValidity())
+  const form = e.currentTarget;
+  console.log(form.checkValidity () )
     
-
-    if (form.checkValidity()) {
-      console.log(formData)
-      console.log('Formulario Validado')
-      let responseData = await sendEmail(formData)
-      console.log(responseData.data)
-      alert('muchas gracias por su mensaje, nos contactaremos a la brevedad');
-      form.reset()
-    } else {
+      if (form.checkValidity () ) {
+          console.log(formData)
+          console.log('Formulario Validado')
+      
+          let responseData = await sendEmail(formData)
+          console.log(responseData.data)
+          alert('muchas gracias por su mensaje, nos contactaremos a la brevedad');
+          form.reset()
+      } else {
+      
       alert('verifique los datos ingresdos');
+    
     }
   }
 
@@ -47,11 +55,11 @@ const Contact = () => {
         <Row>
           <Col md={12} lg={5}>
             <h3>
-              Get in touch<br></br>
-              <span>We are hiring!</span>
+              necesitas mas informacion? <br></br>
+              <span>Contactanos!</span>
             </h3>
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
-              <Form.Group>
+              <Form.Group className='groupForm'>
                 <Form.Control className= "control"
                   onChange={handleOnChange}
                   required
