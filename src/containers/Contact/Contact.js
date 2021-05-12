@@ -27,7 +27,12 @@ const Contact = () => {
       
           let responseData = await sendEmail(formData)
           console.log(responseData.data)
-          alert('muchas gracias por su mensaje, nos contactaremos a la brevedad');
+          Swal.fire(
+            'Muchas gracias por su mensaje, nos contactaremos a la brevedad',
+            '',
+            'success'
+          )
+          //alert('muchas gracias por su mensaje, nos contactaremos a la brevedad');
           form.reset()
       } else {
       
